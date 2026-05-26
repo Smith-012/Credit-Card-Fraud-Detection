@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-fraud-production-style"
+version = "1.0.0"
+description = "Portfolio-grade credit card fraud detection project"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "imbalanced-learn",
+  "joblib",
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "seaborn",
+]
+
+[project.scripts]
+train-fraud = "main:cli"
+
+[tool.setuptools]
+py-modules = ["main"]
